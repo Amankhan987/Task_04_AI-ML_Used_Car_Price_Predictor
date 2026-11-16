@@ -1,0 +1,188 @@
+{
+  "final_model": "Random Forest",
+  "model_files": {
+    "Decision Tree": "decision_tree.joblib",
+    "Random Forest": "car_price_model.joblib",
+    "Gradient Boosting": "gradient_boosting.joblib",
+    "XGBoost": "xgboost.joblib",
+    "Linear Regression": "linear_regression.joblib"
+  },
+  "ref_year": 2020,
+  "target": "selling_price (Indian rupees)",
+  "log_target": true,
+  "metrics_after_tuning": {
+    "Random Forest": {
+      "mae": 78273.27521441001,
+      "rmse": 155296.2304113059,
+      "r2": 0.8984102518085482,
+      "mape": 16.803752069317067,
+      "r2_before": 0.8981848224843405
+    },
+    "XGBoost": {
+      "mae": 78074.5234375,
+      "rmse": 155504.394278747,
+      "r2": 0.8981377482414246,
+      "mape": 16.421249508857727,
+      "r2_before": 0.9117537140846252
+    },
+    "Gradient Boosting": {
+      "mae": 80164.96504058724,
+      "rmse": 159959.9381460662,
+      "r2": 0.8922169395774796,
+      "mape": 16.696631929309046,
+      "r2_before": 0.8953674834948895
+    },
+    "Decision Tree": {
+      "mae": 90675.33712719403,
+      "rmse": 170872.49990604818,
+      "r2": 0.8770092634150609,
+      "mape": 19.957477544957463,
+      "r2_before": 0.8472686321518093
+    },
+    "Linear Regression": {
+      "mae": 98548.24921447989,
+      "rmse": 193273.5465052416,
+      "r2": 0.8426477752511193,
+      "mape": 20.415593022898165,
+      "r2_before": 0.8426477752511193
+    }
+  },
+  "prediction_range": {
+    "Decision Tree": {
+      "lower_factor": 0.7424,
+      "upper_factor": 1.3492,
+      "test_coverage": 0.7876
+    },
+    "Random Forest": {
+      "lower_factor": 0.7774,
+      "upper_factor": 1.2797,
+      "test_coverage": 0.7926
+    },
+    "Gradient Boosting": {
+      "lower_factor": 0.7813,
+      "upper_factor": 1.2765,
+      "test_coverage": 0.7854
+    },
+    "XGBoost": {
+      "lower_factor": 0.7805,
+      "upper_factor": 1.2717,
+      "test_coverage": 0.7905
+    },
+    "Linear Regression": {
+      "lower_factor": 0.7423,
+      "upper_factor": 1.3284,
+      "test_coverage": 0.776
+    }
+  },
+  "best_params": {
+    "Decision Tree": {
+      "max_depth": 15,
+      "min_samples_leaf": 1,
+      "min_samples_split": 10
+    },
+    "Random Forest": {
+      "n_estimators": 300,
+      "min_samples_leaf": 2,
+      "max_features": 0.8,
+      "max_depth": 20
+    },
+    "Gradient Boosting": {
+      "subsample": 0.7,
+      "n_estimators": 300,
+      "min_samples_leaf": 1,
+      "max_depth": 3,
+      "learning_rate": 0.1
+    },
+    "XGBoost": {
+      "subsample": 0.7,
+      "reg_lambda": 1,
+      "n_estimators": 800,
+      "min_child_weight": 1,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "colsample_bytree": 1.0
+    }
+  },
+  "categories": {
+    "brand": [
+      "Ambassador",
+      "Ashok",
+      "Audi",
+      "BMW",
+      "Chevrolet",
+      "Daewoo",
+      "Datsun",
+      "Fiat",
+      "Force",
+      "Ford",
+      "Honda",
+      "Hyundai",
+      "Isuzu",
+      "Jaguar",
+      "Jeep",
+      "Kia",
+      "Land Rover",
+      "Lexus",
+      "MG",
+      "Mahindra",
+      "Maruti",
+      "Mercedes-Benz",
+      "Mitsubishi",
+      "Nissan",
+      "Opel",
+      "Peugeot",
+      "Renault",
+      "Skoda",
+      "Tata",
+      "Toyota",
+      "Volkswagen",
+      "Volvo"
+    ],
+    "fuel": [
+      "CNG",
+      "Diesel",
+      "LPG",
+      "Petrol"
+    ],
+    "seller_type": [
+      "Dealer",
+      "Individual",
+      "Trustmark Dealer"
+    ],
+    "transmission": [
+      "Automatic",
+      "Manual"
+    ],
+    "owner": [
+      "First Owner",
+      "Second Owner",
+      "Third Owner",
+      "Fourth & Above Owner"
+    ]
+  },
+  "input_ranges": {
+    "year_min": 1983,
+    "year_max": 2020,
+    "km_driven_max": 500000,
+    "mileage": [
+      9.0,
+      42.0
+    ],
+    "engine": [
+      624,
+      3604
+    ],
+    "max_power": [
+      32.8,
+      400.0
+    ],
+    "seats": [
+      2,
+      14
+    ]
+  },
+  "training_rows": 5534,
+  "test_rows": 1384,
+  "sklearn_version": "1.6.1",
+  "xgboost_version": "3.4.1"
+}
